@@ -1,0 +1,19 @@
+.concluido {
+    background-color: #198754 !important;
+}
+
+.criacao {
+    background-color: #0dcaf0 !important;
+}
+
+.producao {
+    background-color: #0d6efd !important;
+}
+
+.revisao {
+    background-color: #ffc107 !important;
+}
+
+.correcao {
+    background-color: #ff4500 !important;
+}
