@@ -1,0 +1,38 @@
+.calendario {
+    width: 70%;
+    margin: auto;
+    font-size: 0.8rem;
+    margin-bottom: 40px;
+    border-collapse: collapse;
+    flex-grow: 1;
+
+    & tbody tr {
+        height: 20vh;
+    }
+
+    & th, & td {
+        width: 10%;
+        vertical-align: top;
+        border: 1px solid var(--white1);
+    }
+
+    & .hoje {
+        padding: 2px;
+        border-radius: 5px;
+        color: var(--black1);
+        background-color: var(--white1);
+    }
+
+    & p {
+        width: 90%;
+        margin: 5px auto;
+        border-radius: 5px;
+    }
+
+    & a {
+        cursor: pointer;
+        background: none;
+        text-decoration: none;
+        color: var(--white1);
+    }
+}
