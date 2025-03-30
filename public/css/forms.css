@@ -1,0 +1,28 @@
+/* Forms */
+
+.form {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+
+    & > * {
+        width: 50%;
+        margin: 5px;
+    }
+    
+    & *:not(div) {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+        text-decoration: none;
+        color: var(--white1);
+        background-color: var(--black2);
+        border: 1px solid var(--white1);
+        border-radius: 10px;
+    }
+    
+    & button {
+        cursor: pointer;
+    }   
+}
