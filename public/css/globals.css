@@ -1,0 +1,170 @@
+/* Geral */
+
+:root {
+    --black1: #101010;
+    --black2: #212121;
+    --white1: #ffffff;
+    --white2: #a7a6a6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+html {
+    font-size: 20px;
+    text-align: center;
+    font-family: Helvetica;
+}
+
+body {
+    height: 100%;
+    color: var(--white1);
+    background-color: var(--black2);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Top-Bar */
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--black1);
+    padding: 15px 40px;
+    gap: 20px;
+
+    & a {
+        cursor: pointer;
+        background: none;
+        text-decoration: none;
+        color: var(--white1);
+    }
+}
+
+/* Search-Bar */
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    transition: border-radius 0.5s ease;
+    background: var(--white1);
+    padding-inline: 20px;
+    border-radius: 20px;
+    height: 40px;
+    width: 400px;
+
+    &:focus-within {
+        border-radius: 0;
+    }
+    
+    &:before {
+        left: 0;
+        top: 75px;
+        width: 100%;
+        height: 2px;
+        content: "";
+        position: absolute;
+        transform-origin: center;
+        transition: transform 0.5s ease;
+        background: var(--white1);
+        transform: scaleX(0);
+    }
+    
+    &:focus-within:before {
+        transform: scale(1);
+    }
+    
+    & input {
+        width: 100%;
+        outline: none;
+        font-size: 0.8rem;
+    }
+    
+    & button {
+        cursor: pointer;
+        background: none;
+    }
+}
+
+/* Nav-List */
+
+.nav-list {
+    gap: 20px;
+    display: flex;
+    list-style: none;
+
+    & li span {
+        cursor: default;
+        transition: 0.3s;
+    }
+    
+    & li span:hover,
+    & li:hover span {
+        padding: 10px 20px;
+        border-radius: 20px;
+        background: var(--black2);
+    }
+    
+    & li:hover .submenu {
+        display: block;
+    }
+}
+
+/* Sub-Menu */
+
+.submenu {
+    display: none;
+    list-style: none;
+    position: absolute;
+    background-color: #191919;
+    border-radius: 20px;
+    padding: 5px 20px;
+
+    & li a {
+        display: block;
+        margin: 5px auto;
+    }
+}
+
+
+/* Title */
+
+.title {
+    margin: 20px auto;
+
+    & a {
+        cursor: pointer;
+        background: none;
+        font-size: 0.8rem;
+        color: var(--white1);
+    }
+}
+
+/* Botão */
+
+.button-new {
+    width: 60px;
+    height: 60px;
+    right: 20px;
+    bottom: 20px;
+    position: fixed;
+    font-size: 1.5rem;
+    color: var(--white1);
+    text-decoration: none;
+    background-color: var(--black2);
+    border: 1px solid var(--white1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-10px);
+    }
+}

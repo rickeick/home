@@ -1,0 +1,53 @@
+/* Top-Bar */
+
+.top-bar {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+header:hover .top-bar, .top-bar:focus-within {
+    transform: translateY(0);
+}
+
+/* Modal */
+
+.modal {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow: auto;
+    position: fixed;
+    cursor: default;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    & > div {
+        width: 50%;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid var(--white1);
+        background-color: var(--black2);
+        margin: 5% auto;
+    }
+    
+    & input,
+    & button {
+        padding: 5px 10px;
+        font-size: 0.9rem;
+        color: var(--white1);
+        background-color: var(--black2);
+        border: 1px solid var(--white1);
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    
+    & input {
+        width: 90%;
+    }
+    
+    & button {
+        cursor: pointer;
+    }
+}
