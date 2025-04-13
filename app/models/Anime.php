@@ -57,5 +57,10 @@ class Anime extends Model {
         $sql = "SELECT id, nome, concluidos, total FROM animes WHERE status = 'oculto' ORDER BY nome";
         return $this->db->query($sql);
     }
+
+    public function get($id) : mysqli_result | false {
+        $sql = "SELECT * FROM animes WHERE id = ?";
+        return $this->consult($sql, 'i', $id);
+    }
 }
 ?>

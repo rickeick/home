@@ -15,7 +15,6 @@
                         <li><a href="/animes/atuais">Animes</a></li>
                         <li><a href="/dev">Filmes</a></li>
                         <li><a href="/dev">Séries</a></li>
-                        <li><a href="/dev">Músicas</a></li>
                         <li><a href="/dev">Jogos</a></li>
                     </ul>
                 </li>

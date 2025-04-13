@@ -21,7 +21,7 @@
             </select>
         </div>
         <div>
-            <input style="width: 20%;" type="text" name="lancamento" placeholder="Lançamento" value="/2025.1">
+            <input style="width: 20%;" type="text" name="lancamento" placeholder="Lançamento">
             <input style="width: 20%;" type="number" name="concluidos" min="0" step="1" placeholder="Concluídos" value="0">
             <input style="width: 20%;" type="number" name="atuais" min="0" step="1" placeholder="Eps Atuais">
             <input style="width: 20%;" type="number" name="total" min="0" step="1" placeholder="Total" value="0">
