@@ -55,7 +55,6 @@ CREATE TABLE `tarefas` (
     `data` date COLLATE utf8mb4_general_ci NOT NULL,
     `grupo` enum('Mídia','Minecraft','Disciplina','Pessoal','Pesquisa','Outro') COLLATE utf8mb4_general_ci NOT NULL,
     `anotacoes` text COLLATE utf8mb4_general_ci NOT NULL,
-    `ativo` tinyint(1) NOT NULL,
     PRIMARY KEY (`id`),
     UNIQUE KEY `titulo` (`titulo`)
 ) ENGINE=InnoDB AUTO_INCREMENT=247 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

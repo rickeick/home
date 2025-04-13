@@ -90,5 +90,16 @@ $groups = [
         </tbody>
     </table>
     <a href="/tarefas/cadastrar" class="button-new">+</a>
+    <script>
+    document.addEventListener('keydown', function(event) {
+        if (event.key === "ArrowLeft") {
+            let link = "/tarefas/calendario?mes=<?=$prev->format('m')?>&ano=<?=$prev->format('Y')?>"
+            window.location.assign(link);
+        } else if (event.key === "ArrowRight") {
+            let link = "/tarefas/calendario?mes=<?=$next->format('m')?>&ano=<?=$next->format('Y')?>"
+            window.location.assign(link);
+        }
+    });
+    </script>
 </body>
 </html>

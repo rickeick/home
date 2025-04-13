@@ -7,7 +7,7 @@ class Tarefa extends Model {
         $grupo = $dados['grupo'];
         $titulo = $dados['titulo'];
         $anotacoes = $dados['anotacoes'];
-        $sql = "INSERT INTO tarefas (id, titulo, data, grupo, anotacoes, ativo) VALUES (NULL, ?, ?, ?, ?, 1)";
+        $sql = "INSERT INTO tarefas (id, titulo, data, grupo, anotacoes) VALUES (NULL, ?, ?, ?, ?)";
         return $this->execute($sql, 'ssss', $titulo, $data, $grupo, $anotacoes);
     }
 
@@ -21,12 +21,12 @@ class Tarefa extends Model {
     }
 
     public function conclude($id) {
-        $sql = "UPDATE tarefas SET ativo = 0 WHERE id = ?";
+        $sql = "DELETE FROM tarefas WHERE id = ?";
         return $this->execute($sql, 'i', $id);
     }
 
     public function get_all($mes, $ano) {
-        $sql = "SELECT * FROM tarefas WHERE ativo = 1 AND MONTH(data) = ? AND YEAR(data) = ? ORDER BY data";
+        $sql = "SELECT * FROM tarefas WHERE MONTH(data) = ? AND YEAR(data) = ? ORDER BY data";
         return $this->consult($sql, 'ii', $mes, $ano);
     }
 
