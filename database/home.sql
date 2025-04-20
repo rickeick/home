@@ -3,6 +3,7 @@
 --
 
 CREATE DATABASE IF NOT EXISTS home DEFAULT CHARACTER SET utf16 COLLATE utf16_general_ci;
+
 USE home;
 
 --
@@ -22,7 +23,7 @@ CREATE TABLE `animes` (
     `link` varchar(128) COLLATE utf8mb4_general_ci NOT NULL,
     PRIMARY KEY (`id`),
     UNIQUE KEY `nome` (`nome`)
-) ENGINE=InnoDB AUTO_INCREMENT=247 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Tabela de Projetos
@@ -40,7 +41,7 @@ CREATE TABLE `projetos` (
     `anotacoes` text COLLATE utf8mb4_general_ci NOT NULL,
     PRIMARY KEY (`id`),
     UNIQUE KEY `titulo` (`titulo`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Tabela de Tarefas
@@ -57,4 +58,19 @@ CREATE TABLE `tarefas` (
     `anotacoes` text COLLATE utf8mb4_general_ci NOT NULL,
     PRIMARY KEY (`id`),
     UNIQUE KEY `titulo` (`titulo`)
-) ENGINE=InnoDB AUTO_INCREMENT=247 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Tabela de Filmes
+--
+
+DROP TABLE IF EXISTS `filmes`;
+
+CREATE TABLE `filmes` (
+    `id` smallint unsigned NOT NULL AUTO_INCREMENT,
+    `titulo` varchar(32) COLLATE utf8mb4_general_ci NOT NULL,
+    `duracao` smallint unsigned NOT NULL,
+    `ano` smallint unsigned NOT NULL,
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `titulo` (`titulo`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

@@ -13,7 +13,7 @@
                     <span>Mídias</span>
                     <ul class="submenu">
                         <li><a href="/animes/atuais">Animes</a></li>
-                        <li><a href="/dev">Filmes</a></li>
+                        <li><a href="/filmes/listar">Filmes</a></li>
                         <li><a href="/dev">Séries</a></li>
                         <li><a href="/dev">Jogos</a></li>
                     </ul>
