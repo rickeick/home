@@ -7,6 +7,9 @@ $router = new Router([
     '/backup' => ['Home', 'backup'],
     '/dev' => ['Home', 'development'],
 
+    '/jogos/listar' => ['Jogos', 'list'],
+    '/jogos/cadastrar' => ['Jogos', 'create'],
+
     '/filmes/listar' => ['Filmes', 'list'],
     '/filmes/cadastrar' => ['Filmes', 'create'],
 

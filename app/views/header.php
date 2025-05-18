@@ -15,7 +15,7 @@
                         <li><a href="/animes/atuais">Animes</a></li>
                         <li><a href="/filmes/listar">Filmes</a></li>
                         <li><a href="/dev">Séries</a></li>
-                        <li><a href="/dev">Jogos</a></li>
+                        <li><a href="/jogos/listar">Jogos</a></li>
                     </ul>
                 </li>
                 <li>
