@@ -15,10 +15,10 @@ class HomeController extends Controller {
     }
 
     public function backup() : void {
-        $pass = '';
-        $user = 'root';
-        $name = 'home';
-        $host = 'localhost';
+        $host = getenv('DB_HOST');
+        $name = getenv('DB_NAME');
+        $user = getenv('DB_USER');
+        $pass = getenv('DB_PASS');
 
         $data = date('Y-m-d_H-i-s');
         $dir = dirname(dirname(__DIR__)).'/backups';

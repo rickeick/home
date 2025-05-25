@@ -5,7 +5,11 @@ abstract class Model {
 
     public final function __construct() {
         try {
-            $this->db = new mysqli('localhost', 'root', '', 'home');
+            $host = getenv('DB_HOST');
+            $name = getenv('DB_NAME');
+            $user = getenv('DB_USER');
+            $pass = getenv('DB_PASS');
+            $this->db = new mysqli($host, $user, $pass, $name);
             $this->database_error = $this->db === false;
         } catch (Exception) {
             $this->database_error = true;

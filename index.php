@@ -1,6 +1,23 @@
 <?php
 require 'app/base/Router.php';
 
+$file = '.env';
+if (file_exists($file)) {
+    $lines = file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    foreach ($lines as $line) {
+        if (strpos(trim($line), '#') === 0) {
+            continue;
+        }
+        if (strpos(trim($line), '=') === false) {
+            continue;
+        }
+        list($k, $v) = explode('=', $line, 2);
+        $k = trim($k, " \"");
+        $v = trim($v, " \"");
+        putenv("$k=$v");
+    }
+}
+
 $router = new Router([
     '/' => ['Home', 'index'],
     '/home' => ['Home', 'index'],
