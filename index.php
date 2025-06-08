@@ -30,6 +30,10 @@ $router = new Router([
     '/filmes/listar' => ['Filmes', 'list'],
     '/filmes/cadastrar' => ['Filmes', 'create'],
 
+    '/series/listar' => ['Series', 'list'],
+    '/series/editar' => ['Series', 'edit'],
+    '/series/cadastrar' => ['Series', 'create'],
+
     '/projetos/listar' => ['Projetos', 'list'],
     '/projetos/editar' => ['Projetos', 'edit'],
     '/projetos/cadastrar' => ['Projetos', 'create'],

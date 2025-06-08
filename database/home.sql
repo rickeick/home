@@ -89,3 +89,19 @@ CREATE TABLE `jogos` (
     PRIMARY KEY (`id`),
     UNIQUE KEY `nome` (`nome`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Tabela de Séries
+--
+
+DROP TABLE IF EXISTS `series`;
+
+CREATE TABLE `series` (
+    `id` smallint unsigned NOT NULL AUTO_INCREMENT,
+    `titulo` varchar(64) COLLATE utf8mb4_general_ci NOT NULL,
+    `duracao` smallint unsigned NOT NULL,
+    `temporadas` tinyint unsigned NOT NULL,
+    `episodios` smallint unsigned NOT NULL,
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `titulo` (`titulo`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
