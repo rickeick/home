@@ -84,7 +84,7 @@ CREATE TABLE `jogos` (
     `id` smallint unsigned NOT NULL AUTO_INCREMENT,
     `nome` varchar(64) COLLATE utf8mb4_general_ci NOT NULL,
     `launcher` enum('EA','Epic','Steam','Ubisoft') COLLATE utf8mb4_general_ci NOT NULL,
-    `execução` enum('Boa','Ruim','Péssima') COLLATE utf8mb4_general_ci NOT NULL,
+    `execucao` enum('Boa','Ruim','Péssima') COLLATE utf8mb4_general_ci NOT NULL,
     `tamanho` float(4,1) unsigned NOT NULL,
     PRIMARY KEY (`id`),
     UNIQUE KEY `nome` (`nome`)

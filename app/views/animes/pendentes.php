@@ -1,3 +1,9 @@
+<?php
+    $animes = 0;
+    $episodios = 0;
+    $continuacoes = 0;
+    $novos = 0;
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -29,6 +35,12 @@
         </thead>
         <tbody>
             <?php while ($row = $result->fetch_assoc()): ?>
+                <?php 
+                    $animes += 1;
+                    $episodios += $row['total'];
+                    if ($row['concluidos'] == 0) $novos += 1;
+                    else $continuacoes += 1;
+                ?>
                 <tr>
                     <td>
                         <?php if ($row['link'] !== ''): ?>
@@ -43,6 +55,13 @@
                     <td><a href="/animes/concluir?id=<?=$row['id']?>">Concluir</a></td>
                 </tr>
             <?php endwhile ?>
+            <tr>
+                <td><?=$animes?></td>
+                <td><?="$novos/$continuacoes"?></td>
+                <td><?=$episodios?></td>
+                <td></td>
+                <td></td>
+            </tr>
         </tbody>
     </table>
     <a href="/animes/cadastrar" class="button-new">+</a>

@@ -2,16 +2,19 @@
 $jogos = 0;
 $tamanho = 0;
 $launcher = [
-    'Epic' => 'epic',
-    'Steam' => 'steam',
-    'Ubisoft' => 'ubisoft',
-    'EA' => 'ea'
+    'EA' => 0,
+    'Epic' => 0,
+    'Steam' => 0,
+    'Ubisoft' => 0
 ];
 $execucao = [
-    'Boa' => 'boa',
-    'Ruim' => 'ruim',
-    'Péssima' => 'pessima'
+    'Boa' => 0,
+    'Ruim' => 0,
+    'Péssima' => 0
 ];
+function fun($string) : string {
+    return strtr(strtolower($string), ['é' => 'e']);
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -39,21 +42,23 @@ $execucao = [
         <tbody>
             <?php while ($row = $result->fetch_assoc()): ?>
                 <?php
-                $jogos += 1;
-                $tamanho += $row['tamanho'];
+                    $jogos += 1;
+                    $tamanho += $row['tamanho'];
+                    $launcher[$row['launcher']] += 1;
+                    $execucao[$row['execucao']] += 1;
                 ?>
                 <tr>
                     <td><?=$row['nome']?></td>
                     <td><?=$row['tamanho']?></td>
-                    <td><span class="<?=$launcher[$row['launcher']]?>"><?=$row['launcher']?></span></td>
-                    <td><span class="<?=$execucao[$row['execução']]?>"><?=$row['execução']?></span></td>
+                    <td><span class="<?=fun($row['launcher'])?>"><?=$row['launcher']?></span></td>
+                    <td><span class="<?=fun($row['execucao'])?>"><?=$row['execucao']?></span></td>
                 </tr>
             <?php endwhile ?>
             <tr>
                 <td><?=$jogos?></td>
                 <td><?=$tamanho?></td>
-                <td></td>
-                <td></td>
+                <td><?=implode('/', $launcher)?></td>
+                <td><?=implode('/', $execucao)?></td>
             </tr>
         </tbody>
     </table>

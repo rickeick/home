@@ -1,3 +1,9 @@
+<?php
+    $series = 0;
+    $duracao = 0;
+    $temporadas = 0;
+    $episodios = 0;
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -22,6 +28,12 @@
         </thead>
         <tbody>
             <?php while ($row = $result->fetch_assoc()): ?>
+                <?php
+                    $series += 1;
+                    $duracao += $row['duracao'];
+                    $temporadas += $row['temporadas'];
+                    $episodios += $row['episodios'];
+                ?>
                 <tr>
                     <td><?=$row['titulo']?></td>
                     <td><?=$row['duracao']?></td>
@@ -30,6 +42,13 @@
                     <td><a href="/series/editar?id=<?=$row['id']?>">Editar</a></td>
                 </tr>
             <?php endwhile ?>
+            <tr>
+                <td><?=$series?></td>
+                <td><?=number_format($duracao/$series, 2, ',')?></td>
+                <td><?=$temporadas?></td>
+                <td><?=$episodios?></td>
+                <td></td>
+            </tr>
         </tbody>
     </table>
     <a href="/series/cadastrar" class="button-new">+</a>

@@ -7,7 +7,7 @@ class Jogo extends Model {
         $tamanho = $dados['tamanho'];
         $launcher = $dados['launcher'];
         $execucao = $dados['execucao'];
-        $sql = "INSERT INTO jogos (id, nome, tamanho, launcher, execução) VALUES (NULL, ?, ?, ?, ?)";
+        $sql = "INSERT INTO jogos (id, nome, tamanho, launcher, execucao) VALUES (NULL, ?, ?, ?, ?)";
         return $this->execute($sql, 'sdss', $nome, $tamanho, $launcher, $execucao);
     }
 

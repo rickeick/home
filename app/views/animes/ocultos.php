@@ -44,7 +44,7 @@
                 </tr>
             <?php endwhile ?>
             <tr>
-                <td>Total: <?=$animes?></td>
+                <td><?=$animes?></td>
                 <td><?=$temporadas?></td>
                 <td><?=$episodios?></td>
             </tr>
