@@ -23,7 +23,7 @@
                     <ul class="submenu">
                         <li><a href="/tarefas/calendario">Tarefas</a></li>
                         <li><a href="/projetos/listar">Projetos</a></li>
-                        <li><a href="/dev">Softwares</a></li>
+                        <li><a href="/softwares/listar">Softwares</a></li>
                     </ul>
                 </li>
             </ul>

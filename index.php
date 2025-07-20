@@ -38,6 +38,9 @@ $router = new Router([
     '/projetos/editar' => ['Projetos', 'edit'],
     '/projetos/cadastrar' => ['Projetos', 'create'],
 
+    '/softwares/listar' => ['Software', 'list'],
+    '/softwares/cadastrar' => ['Software', 'create'],
+
     '/tarefas/editar' => ['Tarefas', 'edit'],
     '/tarefas/cadastrar' => ['Tarefas', 'create'],
     '/tarefas/concluir' => ['Tarefas', 'conclude'],

@@ -105,3 +105,20 @@ CREATE TABLE `series` (
     PRIMARY KEY (`id`),
     UNIQUE KEY `titulo` (`titulo`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Tabela de Softwares
+--
+
+DROP TABLE IF EXISTS `softwares`;
+
+CREATE TABLE `softwares` (
+    `id` smallint unsigned NOT NULL AUTO_INCREMENT,
+    `nome` varchar(64) COLLATE utf8mb4_general_ci NOT NULL,
+    `plataforma` enum('Windows','Linux','Multi') COLLATE utf8mb4_general_ci NOT NULL,
+    `categoria` enum('Dev','Games','Social','Utilitário') COLLATE utf8mb4_general_ci NOT NULL,
+    `link` varchar(128) COLLATE utf8mb4_general_ci NOT NULL,
+    `tamanho` smallint unsigned NOT NULL,
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `nome` (`nome`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
